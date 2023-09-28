@@ -1,5 +1,3 @@
-import { json } from '@sveltejs/kit';
-
 export const fetchPosts = async () => {
   const allPostFiles = import.meta.glob("/src/content/blog/*.md");
   const iterablePostFiles = Object.entries(allPostFiles);
@@ -19,15 +17,25 @@ export const fetchPosts = async () => {
   return allPosts;
 };
 
-export const fetchTags = async () => {
+export const fetchTags = async (): Promise<string[]> => {
   const allPosts = await fetchPosts();
-  const allTagsSet = new Set(); 
+  const allTagsSet = new Set<string>(); 
   allPosts.forEach((post) => {
     if (post.meta && Array.isArray(post.meta.tags)) {
       post.meta.tags.forEach((tag: string) => allTagsSet.add(tag));
     }
   });
+  return Array.from(allTagsSet);
+};
 
-  const allTagsArray = Array.from(allTagsSet);
-  return allTagsArray;
+export const fetchYears = async (): Promise<number[]> => {
+  const allPosts = await fetchPosts();
+  const allYearsSet = new Set<number>();
+  allPosts.forEach((post) => {
+    if (post.meta && post.meta.date) {
+      const year = post.meta.date.slice(0, 4);
+      allYearsSet.add(Number(year));
+    }
+  });
+  return Array.from(allYearsSet);
 };

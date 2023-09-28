@@ -1,8 +1,12 @@
 <script lang="ts">
   import SidebarHeading from '$lib/components/SidebarHeading.svelte';
-  // import TagCollection from '$lib/components/TagCollection.svelte';
+  import TagCollection from '$lib/components/TagCollection.svelte';
   export let data;
 </script>
+
+<svelte:head>
+  <title>Blog</title>
+</svelte:head>
 
 <main class="col-span-3 text-[15px]/[24px]">
   <h1 class="text-3xl font-bold mb-4">
@@ -27,7 +31,10 @@
 
 <aside class="col-span-1">
   <div class="mb-4">
-    <SidebarHeading text="Tags"/>
-    <!-- <TagCollection tags={data.tags}/> -->
+    <div class="mb-4">
+      <SidebarHeading text="Tags"/>
+      <TagCollection tags={data.tags}/>
+    </div>
+    <SidebarHeading text="Archives"/>
   </div>
 </aside>

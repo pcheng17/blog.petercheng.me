@@ -1,7 +1,10 @@
 <script lang="ts">
-  // import PostMetadata from '$lib/components/PostMetadata.svelte';
-  // import Sidebar from '$lib/components/Sidebar.svelte';
+  import PostMetadata from '$lib/components/PostMetadata.svelte';
   export let data;
+  const postMeta = {
+    date: data.date,
+    // readTime: 5
+  };
 </script>
 
 <svelte:head>
@@ -24,8 +27,8 @@
     <h1 class="text-3xl font-bold mb-4">
       {data.title}
     </h1>
-    <!-- <PostMetadata /> -->
-    <div class="prose text-[15px] leading-[24px] max-w-none text-black prose-p:my-4 prose-li:my-1">
+    <PostMetadata {...postMeta} />
+    <div class="prose text-[15px] leading-[24px] max-w-none prose-p:my-4 prose-li:my-1">
       <svelte:component this={data.content} />
     </div>
   </article>
