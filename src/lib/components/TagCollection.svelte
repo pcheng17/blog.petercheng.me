@@ -3,7 +3,7 @@
   export let tags: string[] = [];
 </script>
 
-<div class="text-sm">
+<div>
   {#each tags as tag}
     <Tag {tag} />
   {/each}
