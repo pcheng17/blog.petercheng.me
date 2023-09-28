@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ["./src/**/*.{html,js,svelte,ts}"],
+  darkMode: "media",
   theme: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [require("@tailwindcss/typography")],
 };
