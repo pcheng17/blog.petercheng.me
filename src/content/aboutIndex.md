@@ -23,4 +23,4 @@ would love to hear about the ideas you have!
 more easily share with others, and (2) it has allowed me to learn some basic frontend and backend
 skills via [SvelteKit](https://kit.svelte.dev/).  
 - I also try and keep up with my Korean
-studies as much as I can. 근데 시간이 많이 없어~ ㅠㅠ
+studies as much as I can. 근데 시간이 많이 없다~ ㅠㅠ
