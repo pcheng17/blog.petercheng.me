@@ -12,11 +12,11 @@
   <h1 class="text-3xl font-bold mb-4">
     Blog
   </h1>
-  <p class="mb-4">
-    A collection of my thoughts and ideas, or things I've learned and want to share. Enjoy your 
-    stay!
-  </p>
-  <section>
+  <div class="text-[15px]/7 text-gray-900">
+    <p class="mb-4 ">
+      A collection of my thoughts and ideas, or things I've learned and want to share. Enjoy your 
+      stay!
+    </p>
     <ul class="block list-disc my-4 pl-10">
       {#each data.posts as post}
       <li>
@@ -26,7 +26,7 @@
       </li>
       {/each}
     </ul>
-  </section>
+  </div>
 </main>
 
 <aside class="col-span-1">

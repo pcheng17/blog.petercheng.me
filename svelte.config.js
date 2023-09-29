@@ -1,6 +1,9 @@
 import adapter from "@sveltejs/adapter-auto";
 import { vitePreprocess } from "@sveltejs/kit/vite";
-import { mdsvex } from "mdsvex";
+import { mdsvex, escapeSvelte } from "mdsvex";
+import rehypeKatexSvelte from "rehype-katex-svelte";
+import remarkMath from "remark-math";
+import shiki from "shiki";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,6 +12,17 @@ const config = {
   preprocess: [
     vitePreprocess(),
     mdsvex({
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatexSvelte],
+      highlight: {
+        highlighter: async (code, lang = "text") => {
+          const highlighter = await shiki.getHighlighter({
+            theme: "min-light",
+          });
+          const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
+          return `{@html \`${html}\` }`;
+        },
+      },
       extensions: [".md"],
     }),
   ],

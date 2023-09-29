@@ -39,21 +39,3 @@ export const fetchYears = async (): Promise<number[]> => {
   });
   return Array.from(allYearsSet);
 };
-
-export const fetchPostByPath = async (path: string) => {
-  try {
-    const post = await import(path);
-    const { title, date, math, tags } = post.metadata;
-    const content = post.default;
-
-    return {
-      title,
-      date,
-      math,
-      tags,
-      content,
-    };
-  } catch (e: any) {
-    console.error(e);
-  }
-};

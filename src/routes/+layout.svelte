@@ -1,5 +1,6 @@
 <script>
   import "../app.css";
+  import "@fontsource/ubuntu-mono";
   import Header from "$lib/components/Header.svelte";
 </script>
 

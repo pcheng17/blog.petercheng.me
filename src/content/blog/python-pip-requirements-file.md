@@ -16,7 +16,7 @@ Oftentimes, it's very useful to record all of the required modules/packages of a
 
 Assuming you're using [`pip`](https://pypi.org/project/pip/) to manage your packages, run the following command:
 
-```python
+```bash
 pip freeze > requirements.txt
 ```
 
@@ -24,6 +24,6 @@ This generates a text file, `requirements.txt`, with all of the modules/packages
 
 If you're on a new machine and need to install of the required packages listed in a `requirements.txt` file, run the following command:
 
-```python
+```bash
 pip install -r requirements.txt
 ```
