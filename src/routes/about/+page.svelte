@@ -1,11 +1,6 @@
 <script lang="ts">
-  import PostMetadata from '$lib/components/PostMetadata.svelte';
   import Prose from '$lib/components/Prose.svelte';
   export let data;
-  const postMeta = {
-    datePublished: data.date,
-    // readTime: 5
-  };
 </script>
 
 <svelte:head>
@@ -28,7 +23,6 @@
     <h1 class="text-3xl font-bold mb-4">
       {data.title}
     </h1>
-    <PostMetadata {...postMeta} />
     <Prose content={data.content} />
   </article>
 </main>
