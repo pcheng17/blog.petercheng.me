@@ -5,18 +5,20 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>{data.tag}</title>
+  <meta property="og:title" content={data.tag} />
+  <!-- and others -->
 </svelte:head>
 
-<main class="col-span-3 text-[15px]/[24px]">
+<main class="col-span-3">
   <h1 class="text-3xl font-bold mb-4">
-    Blog
+    {data.tag}
   </h1>
-  <div class="text-[15px]/7 text-gray-900">
-    <p class="mb-4 ">
-      A collection of my thoughts and ideas, or things I've learned and want to share. Enjoy your 
-      stay!
+  {#if data.posts.length === 0}
+    <p class="text-gray-900">
+      No posts found.
     </p>
+  {:else}
     <ul class="block list-disc my-4 pl-10">
       {#each data.posts as post}
         <li>
@@ -26,15 +28,14 @@
         </li>
       {/each}
     </ul>
-  </div>
+  {/if}
 </main>
 
 <aside class="col-span-1">
   <div class="mb-4">
     <div class="mb-4">
       <SidebarHeading text="Tags"/>
-      <TagCollection tags={data.tags}/>
+      <TagCollection tags={data.allTags}/>
     </div>
-    <SidebarHeading text="Archives"/>
   </div>
 </aside>

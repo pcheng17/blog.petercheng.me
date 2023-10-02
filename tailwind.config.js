@@ -9,6 +9,7 @@ export default {
     extend: {
       colors: {
         "penn-red": "#a00000",
+        "teal": "#006a80",
       },
       fontFamily: {
         mono: ["Ubuntu Mono", ...defaultTheme.fontFamily.mono],

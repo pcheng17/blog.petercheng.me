@@ -3,6 +3,6 @@
   export let text: string = "";
 </script>
 
-<a {href} class="text-penn-red">
+<a {href} class="text-penn-red hover:text-teal">
   {text}
 </a>
