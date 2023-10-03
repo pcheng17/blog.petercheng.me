@@ -1,6 +1,7 @@
 <script lang="ts">
   import SidebarHeading from '$lib/components/SidebarHeading.svelte';
   import TagCollection from '$lib/components/TagCollection.svelte';
+  import BlogPostCard from '$lib/components/BlogPostCard.svelte';
   export let data;
 </script>
 
@@ -13,19 +14,32 @@
     Blog
   </h1>
   <div class="text-[15px]/7 text-gray-900">
-    <p class="mb-4 ">
+    <!-- <p class="mb-4 ">
       A collection of my thoughts and ideas, or things I've learned and want to share. Enjoy your 
       stay!
-    </p>
+    </p> -->
     <ul class="block list-disc my-4 pl-10">
       {#each data.posts as post}
         <li>
-          <a href={post.path} class="text-penn-red">
+          <a href={post.path} class="text-penn-red mr-1 text-base">
             {post.meta.title}
           </a>
+          {#each post.meta.tags as tag, index}
+            <span class="mr-2 text-gray-400">
+              <a href={`/tags/${tag}`} class="text-xs">#{tag}</a>
+            </span>
+          {/each}
         </li>
       {/each}
     </ul>
+    <!-- {#each data.posts as post}
+      <BlogPostCard 
+        title="{post.meta.title}" 
+        datePublished="{post.meta.date}" 
+        tags="{post.meta.tags}"
+        description="{post.meta.description}" 
+        path="{post.path}"/>
+    {/each} -->
   </div>
 </main>
 

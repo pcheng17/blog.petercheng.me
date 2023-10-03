@@ -1,6 +1,6 @@
 <script lang="ts">
   import NavBar from "./Navbar.svelte";
-  // import img from "$lib/images/banner.png";
+  import img from "$lib/assets/banner.png";
   import { siteTitle } from "$lib/config";
 </script>
 
@@ -10,6 +10,8 @@
       {siteTitle}
     </a>
   </div>
-  <!-- <img src={img} alt="Hero" class="mb-2" /> -->
+  <!-- <div class="w-full h-60 overflow-hidden mb-2">
+    <img src={img} alt="Hero" class="w-full h-full object-cover object-center" />
+  </div> -->
   <NavBar />
 </header>

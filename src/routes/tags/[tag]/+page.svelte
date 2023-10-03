@@ -1,4 +1,5 @@
 <script lang="ts">
+  import BlogPostCard from '$lib/components/BlogPostCard.svelte';
   import SidebarHeading from '$lib/components/SidebarHeading.svelte';
   import TagCollection from '$lib/components/TagCollection.svelte';
   export let data;
@@ -19,15 +20,14 @@
       No posts found.
     </p>
   {:else}
-    <ul class="block list-disc my-4 pl-10">
-      {#each data.posts as post}
-        <li>
-          <a href={post.path} class="text-penn-red">
-            {post.meta.title}
-          </a>
-        </li>
-      {/each}
-    </ul>
+    {#each data.posts as post}
+      <BlogPostCard 
+        title="{post.meta.title}" 
+        datePublished="{post.meta.date}" 
+        tags="{post.meta.tags}"
+        description="{post.meta.description}" 
+        path="{post.path}"/>
+    {/each}
   {/if}
 </main>
 
