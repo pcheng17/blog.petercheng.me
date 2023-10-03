@@ -35,6 +35,6 @@
       <SidebarHeading text="Tags"/>
       <TagCollection tags={data.tags}/>
     </div>
-    <SidebarHeading text="Archives"/>
+    <!-- <SidebarHeading text="Archives"/> -->
   </div>
 </aside>

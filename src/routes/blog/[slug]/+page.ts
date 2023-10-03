@@ -1,4 +1,5 @@
 import type { PageLoad } from './$types';
+import { error } from '@sveltejs/kit';
 
 export const load = (async({ params }) => {
   try {
@@ -13,6 +14,6 @@ export const load = (async({ params }) => {
         content,
       }
   } catch (e: any) {
-    console.error(e);
+    throw error(404, 'Post not found');
   }
 }) satisfies PageLoad;
