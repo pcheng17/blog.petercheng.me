@@ -2,11 +2,11 @@
   import NavLink from "./NavLink.svelte";
 </script>
 
-<nav class="text-[15px] space-x-8 py-2 border-b border-t">
+<nav class="text-md space-x-4">
   <NavLink href="/" text="Home" />
-  <!-- <NavLink href="/blog" text="Blog" /> -->
+  <NavLink href="/archive" text="Archive" />
   <!-- <NavLink href="/talks" text="Talks" /> -->
   <!-- <NavLink href="/projects" text="Projects" /> -->
-  <!-- <NavLink href="/contact" text="Contact" /> -->
+  <NavLink href="/contact" text="Contact" />
   <NavLink href="/about" text="About" />
 </nav>

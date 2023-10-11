@@ -3,6 +3,6 @@
   export let text: string = "";
 </script>
 
-<a {href} class="text-gray-900 hover:underline">
+<a {href} class="underline underline-offset-4">
   {text}
 </a>

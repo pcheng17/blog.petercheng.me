@@ -8,43 +8,37 @@
   <title>Peter Cheng</title>
 </svelte:head>
 
-<main class="col-span-3 text-[15px]/[24px]">
-  <div class="text-[15px]/7 text-gray-900">
-    <p class="mb-4 ">
-      An incomplete yet ever-growing collection of notes on things I've learned. Enjoy your time browsing!
-    </p>
-    <ul class="block list-disc my-4 pl-10">
-      {#each data.posts as post}
-        <li>
-          <a href={post.path} class="text-penn-red hover:underline mr-1 text-base">
-            {post.meta.title}
-          </a>
-          {#each post.meta.tags as tag, index}
-            <span class="mr-2 text-gray-400 hover:underline">
-              <a href={`/tags/${tag}`} class="text-xs">#{tag}</a>
-            </span>
-          {/each}
-        </li>
-      {/each}
-    </ul>
-    <!-- {#each data.posts as post}
-      <BlogPostCard 
-        title="{post.meta.title}" 
-        datePublished="{post.meta.date}" 
-        tags="{post.meta.tags}"
-        description="{post.meta.description}" 
-        path="{post.path}"/>
-    {/each} -->
-  </div>
+<main class="text-base/7">
+  <ul class="block my-4">
+    {#each data.posts as post}
+      <li>
+        <a href={post.path} class="underline underline-offset-4 mr-1">
+          {post.meta.title}
+        </a>
+        {#each post.meta.tags as tag, index}
+          <span class="mr-2 text-gray-400 hover:underline">
+            <a href={`/tags/${tag}`} class="text-sm">#{tag}</a>
+          </span>
+        {/each}
+      </li>
+    {/each}
+  </ul>
+  <!-- {#each data.posts as post}
+    <BlogPostCard 
+      title="{post.meta.title}" 
+      datePublished="{post.meta.date}" 
+      tags="{post.meta.tags}"
+      description="{post.meta.description}" 
+      path="{post.path}"/>
+  {/each} -->
 </main>
 
-<aside class="col-span-1">
+<!-- <aside class="col-span-1">
   <div class="mb-4">
     <div class="mb-4">
       <SidebarHeading text="Tags"/>
       <TagCollection tags={data.tags}/>
     </div>
-    <!-- <SidebarHeading text="Archives"/> -->
   </div>
-</aside>
+</aside> -->
 

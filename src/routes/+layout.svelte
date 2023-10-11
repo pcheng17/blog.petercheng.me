@@ -4,12 +4,10 @@
   import Header from "$lib/components/Header.svelte";
 </script>
 
-<div class="p-4 mx-auto max-w-screen-lg">
-  <div class="bg-white p-4">
-    <Header />
-    <div class="grid grid-cols-4 gap-8 mt-6 mb-24">
-      <slot />
-    </div>
+<div class="p-4 mx-auto max-w-screen-md">
+  <Header />
+  <div class="mt-4 mb-24">
+    <slot />
   </div>
 </div>
 
