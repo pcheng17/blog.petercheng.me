@@ -24,13 +24,13 @@
   }
 </script>
 
-<div class="my-4 text-gray-900">
-  <a href={path} class="hover:underline">
-    <h1 class="text-xl font-bold mb-1"> 
+<div class="my-4">
+  <h1 class="text-lg"> 
+    <a href={path} class="">
       {title} 
-    </h1> 
-  </a>
-  <div class="text-xs text-gray-400 mb-2">
+    </a>
+  </h1> 
+  <div class="text-xs text-gray-500 mb-2">
     <time datetime={datePublished}>{formattedDate}</time>
     <span aria-hidden="true">•</span>
     <span class="text-xs">

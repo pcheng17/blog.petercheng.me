@@ -6,7 +6,7 @@
 
 <div class="p-4 mx-auto max-w-screen-md">
   <Header />
-  <div class="mt-4 mb-24">
+  <div class="mt-6 mb-24">
     <slot />
   </div>
 </div>

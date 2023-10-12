@@ -11,7 +11,7 @@
   <!-- and others -->
 </svelte:head>
 
-<main class="col-span-3">
+<main>
   <h1 class="text-3xl font-bold mb-4">
     {data.tag}
   </h1>

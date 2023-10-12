@@ -2,7 +2,7 @@
   export let tag="";
 </script>
 
-<span class="text-xs bg-gray-100 px-1 py-[2px] mr-1 my-[2px] rounded-sm inline-block">
+<span class="text-sm bg-gray-100 px-1 py-[2px] ml-1 my-[2px] rounded-md inline-block">
   <a href="/tags/{tag}" class="text-penn-red hover:text-teal">
     {tag}
   </a>
