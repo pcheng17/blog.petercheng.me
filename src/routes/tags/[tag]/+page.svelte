@@ -1,5 +1,5 @@
 <script lang="ts">
-  import BlogPostCard from '$lib/components/BlogPostCard.svelte';
+  import BlogPostCard from '$lib/components/BlogPostItem.svelte';
   import SidebarHeading from '$lib/components/SidebarHeading.svelte';
   import TagCollection from '$lib/components/TagCollection.svelte';
   export let data;
@@ -30,12 +30,3 @@
     {/each}
   {/if}
 </main>
-
-<aside class="col-span-1">
-  <div class="mb-4">
-    <div class="mb-4">
-      <SidebarHeading text="Tags"/>
-      <TagCollection tags={data.allTags}/>
-    </div>
-  </div>
-</aside>

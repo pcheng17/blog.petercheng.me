@@ -16,7 +16,7 @@
   }
 </script>
 
-<div class="text-xs text-gray-500 mb-4">
+<div class="text-sm text-gray-700 mb-4">
   <time datetime={datePublished}>{formattedDate}</time>
   <!-- <span class="mx-2" aria-hidden="true">•</span> -->
   <!-- <span>{readTime} min read</span> -->

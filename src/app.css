@@ -5,3 +5,10 @@
 .katex {
   font-size: 1em !important;
 }
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  /* Firefox */
+  -webkit-font-smoothing: antialiased;
+  /* WebKit  */
+}

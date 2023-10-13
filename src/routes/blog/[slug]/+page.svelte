@@ -32,7 +32,3 @@
     <Prose content={data.content} />
   </article>
 </main>
-
-<!-- <aside class="col-span-1">
-  <Sidebar />
-</aside> -->

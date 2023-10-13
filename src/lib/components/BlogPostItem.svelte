@@ -1,16 +1,47 @@
 <script lang="ts">
+  import type { BlogPostCardProps } from "$lib/types";
   import Tag from "./Tag.svelte";
-  export let path: string = "";
+
+  // export let title: BlogPostCardProps["title"];
+  // export let datePublished: BlogPostCardProps["datePublished"];
+  // export let description: BlogPostCardProps["description"];
+
   export let title: string = "";
+  export let datePublished: string = "";
   export let tags: string[] = [];
+  export let description: string = "";
+  export let path: string = "";
+
+  let formattedDate: string;
+
+  $: {
+    const dateObj = new Date(datePublished);
+    formattedDate = dateObj.toLocaleDateString('en-US', {
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric'
+    });
+  }
 </script>
 
-<a href={path} class="underline underline-offset-4">
-  {title}
-</a>
-{#each tags as tag, index}
-  <!-- <span class="ml-1 text-penn-red hover:underline">
-    <a href={`/tags/${tag}`} class="text-sm">#{tag}</a>
-  </span> -->
-  <Tag tag={tag} />
-{/each}
+<div class="my-4">
+  <h1 class="text-lg"> 
+    <a href={path} class="underline underline-offset-2 decoration-1">
+      {title} 
+    </a>
+  </h1> 
+  <div class="text-sm text-gray-700 mb-2">
+    <time datetime={datePublished}>{formattedDate}</time>
+    <span aria-hidden="true">•</span>
+    <span class="text-sm">
+    {#each tags as tag, index}
+      <span class="mr-[1px]">
+        <a href={`/tags/${tag}`} class="text-penn-red hover:text-teal">{tag}</a>{index !== tags.length - 1 ? ',' : ''}
+      </span>
+    {/each}
+    </span>
+  </div>
+  <!-- <p class="text-[15px]/7 text-gray-900">
+    {description}
+  </p> -->
+</div>

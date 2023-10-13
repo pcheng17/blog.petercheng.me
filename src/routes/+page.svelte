@@ -1,6 +1,5 @@
 <script lang="ts">
   import BlogPostItem from '$lib/components/BlogPostItem.svelte';
-  import BlogPostCard from '$lib/components/BlogPostCard.svelte';
   export let data;
 </script>
 
@@ -8,11 +7,11 @@
   <title>Peter Cheng</title>
 </svelte:head>
 
-<main class="text-base/7">
+<main class="">
   <ul class="block my-4">
     {#each data.posts as post}
       <li>
-        <BlogPostCard 
+        <BlogPostItem
           title={post.meta.title}
           datePublished={post.meta.date} 
           tags={post.meta.tags}
