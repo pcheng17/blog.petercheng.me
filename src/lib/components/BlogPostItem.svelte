@@ -38,6 +38,7 @@
       <span class="mr-[1px]">
         <a href={`/tags/${tag}`} class="text-penn-red hover:text-teal">{tag}</a>{index !== tags.length - 1 ? ',' : ''}
       </span>
+      <!-- <Tag tag={tag} /> -->
     {/each}
     </span>
   </div>
