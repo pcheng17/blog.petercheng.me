@@ -13,7 +13,7 @@
       <li>
         <BlogPostItem
           title={post.meta.title}
-          datePublished={post.meta.date} 
+          datePublished={post.meta.pubDate} 
           tags={post.meta.tags}
           description={post.meta.description} 
           path={post.path}/>

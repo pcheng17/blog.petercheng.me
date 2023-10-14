@@ -7,6 +7,8 @@ export const fetchPosts = async () => {
       const { metadata } = await resolver();
       const postPath = path.slice(12, -3); // hard-coded for my directory structure
 
+      // TODO Fix dates here so that no one downstream needs to worry about timezones or formatting
+
       return {
         meta: metadata,
         path: postPath,

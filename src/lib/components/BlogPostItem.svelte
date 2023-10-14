@@ -15,11 +15,12 @@
   let formattedDate: string;
 
   $: {
-    const dateObj = new Date(datePublished);
+    const dateObj = new Date(`${datePublished.split('T')[0]}T00:00:00-07:00`);
     formattedDate = dateObj.toLocaleDateString('en-US', {
       year: 'numeric', 
       month: 'long', 
-      day: 'numeric'
+      day: 'numeric',
+      timeZone: 'America/Los_Angeles'
     });
   }
 </script>
@@ -38,11 +39,7 @@
       <span class="mr-[1px]">
         <a href={`/tags/${tag}`} class="text-penn-red hover:text-teal">{tag}</a>{index !== tags.length - 1 ? ',' : ''}
       </span>
-      <!-- <Tag tag={tag} /> -->
     {/each}
     </span>
   </div>
-  <!-- <p class="text-[15px]/7 text-gray-900">
-    {description}
-  </p> -->
 </div>

@@ -3,14 +3,18 @@ import { error } from '@sveltejs/kit';
 
 export const load = (async({ params }) => {
   try {
-      const post = await import(`../../../content/blog/${params.slug}.md`);
-      const { title, date, math } = post.metadata;
+      const slug = params.slug;
+      const post = await import(`../../../content/blog/${slug}.md`);
+      const { title, pubDate, description, math, tags } = post.metadata;
       const content = post.default;
 
       return {
         title,
-        date,
+        slug,
+        pubDate,
+        description,
         math,
+        tags,
         content,
       }
   } catch (e: any) {

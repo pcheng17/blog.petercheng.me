@@ -16,7 +16,7 @@
     {data.tag}
   </h1>
   {#if data.posts.length === 0}
-    <p class="text-gray-900">
+    <p>
       No posts found.
     </p>
   {:else}

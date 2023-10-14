@@ -1,15 +1,15 @@
 ---
 title: Hello, world!
-date: 2022-10-30T22:10:04-07:00
-description: Peter Cheng's first blog post.
+date: 2023-10-13
+description: Peter Cheng's first blog post
 keywords:
 tags:
 - journal
 math: false
 toc: false
 draft: false
-pubDate: 2022-11-20
-lastMod: 2023-08-06
+pubDate: 2023-10-15
+lastMod: 
 ---
 
 Hello, world! I now have a little corner on the interwebs all to myself.
@@ -19,15 +19,15 @@ for my future self. Back in school, I was never much of a note-taker, but I've b
 importance of writing things down. Our brains are great at producing new ideas, but terrible at
 remembering things.
 
-This website is built by me with [Astro](https://astro.build/) and 
-[Tailwind](https://tailwindcss.com/), and deployed on [Netlify](https://netlify.com). It's been a
+This website is built by me with [SvelteKit](https://kit.svelte.dev/) and 
+[Tailwind](https://tailwindcss.com/), and deployed on [Vercel](https://vercel.com). It's been a
 lot of fun learning basic frontend skills, and I'm looking forward to seeing how this website grows
 overtime! If you're curious, check out the source code
 [here](https://github.com/pcheng17/petercheng.me). I am always happy to receive feedback!
 
 This was inspired by the work of many others, in no particular order:
-- Josh Branchaud's [repository](https://github.com/jbranchaud/til) aptly named "Today I Learned"
+- Bonsoon's [blog](https://blog.bonsoon.net/), from which I am shamelessly stealing much of my inspiration
+- Simon Boehm's [blog](https://siboehm.com/)
 - Shawn Wang's essay, [Learn In Public](https://www.swyx.io/learn-in-public/)
 - Austin Kleon's [Show Your Work!](https://austinkleon.com/show-your-work/)
-- Simon Boehm's [website/blog](https://siboehm.com/)
-- Bonsoon Lin's [website](https://radiofreemath.org/)
+- Josh Branchaud's [repository](https://github.com/jbranchaud/til) aptly named "Today I Learned"
