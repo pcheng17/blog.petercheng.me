@@ -41,3 +41,14 @@ export const fetchYears = async (): Promise<number[]> => {
   });
   return Array.from(allYearsSet);
 };
+
+export const getFormattedDate = (date: string): string => {
+  const dateObj = date.includes('T') ? new Date(`${date.split('T')[0]}T00:00:00-07:00`) : new Date(`${date}T00:00:00-07:00`);
+  const formattedDate = dateObj.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: 'America/Los_Angeles'
+  });
+  return formattedDate;
+}

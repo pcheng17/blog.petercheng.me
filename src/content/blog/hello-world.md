@@ -5,6 +5,8 @@ description: Peter Cheng's first blog post
 keywords:
 tags:
 - journal
+- math
+- blog
 math: false
 toc: false
 draft: false
@@ -12,12 +14,9 @@ pubDate: 2023-10-15
 lastMod: 
 ---
 
-Hello, world! I now have a little corner on the interwebs all to myself.
-
-I'm planning to use this space as a way to record things that I learn that I want to save
-for my future self. Back in school, I was never much of a note-taker, but I've begun to realize the
-importance of writing things down. Our brains are great at producing new ideas, but terrible at
-remembering things.
+I now have a little corner on the interwebs all to myself. I'm planning to use this space as a way
+to record things that I learn that I want to save for my future self, or perhaps for others who
+might stumble upon my blog.
 
 This website is built by me with [SvelteKit](https://kit.svelte.dev/) and 
 [Tailwind](https://tailwindcss.com/), and deployed on [Vercel](https://vercel.com). It's been a

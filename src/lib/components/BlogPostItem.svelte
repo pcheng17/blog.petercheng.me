@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { BlogPostCardProps } from "$lib/types";
-  import Tag from "./Tag.svelte";
+  import TagList from "./TagList.svelte";
+  import { getFormattedDate } from "$lib/utils";
 
   // export let title: BlogPostCardProps["title"];
   // export let datePublished: BlogPostCardProps["datePublished"];
@@ -12,17 +13,7 @@
   export let description: string = "";
   export let path: string = "";
 
-  let formattedDate: string;
-
-  $: {
-    const dateObj = new Date(`${datePublished.split('T')[0]}T00:00:00-07:00`);
-    formattedDate = dateObj.toLocaleDateString('en-US', {
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric',
-      timeZone: 'America/Los_Angeles'
-    });
-  }
+  let formattedDate: string = getFormattedDate(datePublished);
 </script>
 
 <div class="my-4">
@@ -34,12 +25,6 @@
   <div class="text-sm text-gray-700 mb-2">
     <time datetime={datePublished}>{formattedDate}</time>
     <span aria-hidden="true">•</span>
-    <span class="text-sm">
-    {#each tags as tag, index}
-      <span class="mr-[1px]">
-        <a href={`/tags/${tag}`} class="text-penn-red hover:text-teal">{tag}</a>{index !== tags.length - 1 ? ',' : ''}
-      </span>
-    {/each}
-    </span>
+    <TagList {tags} />
   </div>
 </div>
