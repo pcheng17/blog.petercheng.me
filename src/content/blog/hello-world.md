@@ -5,8 +5,6 @@ description: Peter Cheng's first blog post
 keywords:
 tags:
 - journal
-- math
-- blog
 math: false
 toc: false
 draft: false
