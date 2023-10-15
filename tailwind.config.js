@@ -27,8 +27,8 @@ export default {
               code: {
                 fontFace: theme("fontFamily.mono"),
                 fontSize: theme("fontSize.base"),
-                fontWeight: theme("fontWeight.normal"),
-                backgroundColor: theme("colors.neutral.100"),
+                fontWeight: theme("fontWeight.light"),
+                backgroundColor: theme("colors.gray.100"),
                 borderRadius: theme("borderRadius.md"),
                 border: `1px solid ${theme("colors.neutral.200")}`,
                 paddingLeft: theme("spacing[1.5]"),

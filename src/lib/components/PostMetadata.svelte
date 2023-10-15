@@ -1,23 +1,19 @@
 <script lang="ts">
   import type { PostMetadataProps } from "$lib/types";
+  import TagList from "./TagList.svelte";
+  import { getFormattedDate } from "$lib/utils";
 
   export let datePublished: PostMetadataProps['datePublished'];
+  export let tags: PostMetadataProps['tags'];
   // export let readTime: PostMetadataProps['readTime'];
 
-  let formattedDate: string;
-
-  $: {
-    const dateObj = new Date(datePublished);
-    formattedDate = dateObj.toLocaleDateString('en-US', {
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric'
-    });
-  }
+  let formattedDate: string = getFormattedDate(datePublished);
 </script>
 
-<div class="text-xs text-gray-400 mb-4">
+<div class="text-sm text-gray-700 mb-4">
   <time datetime={datePublished}>{formattedDate}</time>
+  <span aria-hidden="true">•</span>
+  <TagList {tags} />
   <!-- <span class="mx-2" aria-hidden="true">•</span> -->
   <!-- <span>{readTime} min read</span> -->
 </div>

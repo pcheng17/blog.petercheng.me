@@ -22,5 +22,4 @@ would love to hear about the ideas you have!
 - This website, which serves two purposes: (1) it encourages me to document things I've learned to
 more easily share with others, and (2) it has allowed me to learn some basic frontend and backend
 skills via [SvelteKit](https://kit.svelte.dev/).  
-- I also try and keep up with my Korean
-studies as much as I can. 근데 시간이 많이 없다~ ㅠㅠ
+- I also try and keep up with my Korean studies as much as I can.

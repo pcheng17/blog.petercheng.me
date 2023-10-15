@@ -1,18 +1,27 @@
 <script lang="ts">
   import PostMetadata from '$lib/components/PostMetadata.svelte';
   import Prose from '$lib/components/Prose.svelte';
+  import { siteUrl } from '$lib/config.js';
   export let data;
   const postMeta = {
-    datePublished: data.date,
+    datePublished: data.pubDate,
+    tags: data.tags,
     // readTime: 5
   };
+
+  let url: string = [siteUrl, "blog", data.slug].join("/");
 </script>
 
 <svelte:head>
   <title>{data.title}</title>
+  <link rel="canonical" href={url} />
+  <meta name="description" content={data.description} />
+  <meta name="robots" content="index, follow" />
   <meta property="og:title" content={data.title} />
-  <!-- and others -->
-  
+  <meta property="og:description" content={data.description} />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content={url} />
+
   {#if data.math}
   <link
     rel="stylesheet"
@@ -23,7 +32,7 @@
   {/if}
 </svelte:head>
 
-<main class="col-span-3">
+<main>
   <article>
     <h1 class="text-3xl font-bold mb-4">
       {data.title}
@@ -32,7 +41,3 @@
     <Prose content={data.content} />
   </article>
 </main>
-
-<!-- <aside class="col-span-1">
-  <Sidebar />
-</aside> -->

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import BlogPostCard from '$lib/components/BlogPostCard.svelte';
+  import BlogPostCard from '$lib/components/BlogPostItem.svelte';
   import SidebarHeading from '$lib/components/SidebarHeading.svelte';
   import TagCollection from '$lib/components/TagCollection.svelte';
   export let data;
@@ -11,12 +11,12 @@
   <!-- and others -->
 </svelte:head>
 
-<main class="col-span-3">
+<main>
   <h1 class="text-3xl font-bold mb-4">
     {data.tag}
   </h1>
   {#if data.posts.length === 0}
-    <p class="text-gray-900">
+    <p>
       No posts found.
     </p>
   {:else}
@@ -30,12 +30,3 @@
     {/each}
   {/if}
 </main>
-
-<aside class="col-span-1">
-  <div class="mb-4">
-    <div class="mb-4">
-      <SidebarHeading text="Tags"/>
-      <TagCollection tags={data.allTags}/>
-    </div>
-  </div>
-</aside>
