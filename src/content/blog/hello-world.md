@@ -22,7 +22,7 @@ This website is built by me with [SvelteKit](https://kit.svelte.dev/) and
 [Tailwind](https://tailwindcss.com/), and deployed on [Vercel](https://vercel.com). It's been a
 lot of fun learning basic frontend skills, and I'm looking forward to seeing how this website grows
 overtime! If you're curious, check out the source code
-[here](https://github.com/pcheng17/petercheng.me). I am always happy to receive feedback!
+[here](https://github.com/pcheng17/blog.petercheng.me). I am always happy to receive feedback!
 
 This was inspired by the work of many others, in no particular order:
 - Bonsoon's [blog](https://blog.bonsoon.net/), from which I am shamelessly stealing much of my inspiration
