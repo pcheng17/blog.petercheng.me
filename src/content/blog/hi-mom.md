@@ -1,5 +1,5 @@
 ---
-title: Hello, world!
+title: Hi, Mom!
 date: 2023-10-13
 description: Peter Cheng's first blog post
 keywords:
