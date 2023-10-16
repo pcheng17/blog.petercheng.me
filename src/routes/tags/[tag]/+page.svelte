@@ -1,7 +1,6 @@
 <script lang="ts">
   import BlogPostCard from '$lib/components/BlogPostItem.svelte';
-  import SidebarHeading from '$lib/components/SidebarHeading.svelte';
-  import TagCollection from '$lib/components/TagCollection.svelte';
+  import Title from '$lib/components/Title.svelte';
   export let data;
 </script>
 
@@ -12,9 +11,7 @@
 </svelte:head>
 
 <main>
-  <h1 class="text-3xl font-bold mb-4">
-    {data.tag}
-  </h1>
+  <Title title={data.tag} />
   {#if data.posts.length === 0}
     <p>
       No posts found.

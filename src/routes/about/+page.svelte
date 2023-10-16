@@ -1,32 +1,30 @@
 <script lang="ts">
+  import Katex from '$lib/components/Katex.svelte';
   import Prose from '$lib/components/Prose.svelte';
+  import Title from '$lib/components/Title.svelte';
+  import { siteUrl } from '$lib/config.js';
   export let data;
+
+  let url: string = [siteUrl, "about"].join("/");
+  let title: string = data.title;
 </script>
 
 <svelte:head>
-  <title>{data.title}</title>
-  <meta property="og:title" content={data.title} />
-  <!-- and others -->
-  
-  {#if data.math}
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.css"
-    integrity="sha384-Cqd8ihRLum0CCg8rz0hYKPoLZ3uw+gES2rXQXycqnL5pgVQIflxAUDS7ZSjITLb5"
-    crossorigin="anonymous"
-  />
-  {/if}
+  <title>{title}</title>
+  <link rel="canonical" href={url} />
+  <meta name="description" content={data.description} />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={data.description} />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content={url} />
+
+  <Katex hasMath={data.math} />
 </svelte:head>
 
 <main>
   <article>
-    <h1 class="text-3xl font-bold mb-4">
-      {data.title}
-    </h1>
+    <Title {title} />
     <Prose content={data.content} />
   </article>
 </main>
-
-<!-- <aside class="col-span-1">
-  <Sidebar />
-</aside> -->

@@ -22,9 +22,12 @@
       {title} 
     </a>
   </h1> 
-  <div class="text-sm text-gray-700 mb-2">
+  <div class="text-sm text-gray-700">
     <time datetime={datePublished}>{formattedDate}</time>
     <span aria-hidden="true">•</span>
     <TagList {tags} />
+    <!-- <div class="mt-1">
+      {description}
+    </div> -->
   </div>
 </div>
