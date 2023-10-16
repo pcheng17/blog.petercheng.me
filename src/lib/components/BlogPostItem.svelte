@@ -16,7 +16,7 @@
   let formattedDate: string = getFormattedDate(datePublished);
 </script>
 
-<div class="my-4">
+<div class="my-3">
   <h1 class="text-lg"> 
     <a href={path} class="underline underline-offset-2 decoration-1">
       {title} 

@@ -8,8 +8,8 @@ tags:
 - linear-algebra
 math: true
 toc: false
-draft: true
-pubDate: 2022-12-10
+draft: false
+pubDate: 2023-10-15
 lastmod:
 ---
 
