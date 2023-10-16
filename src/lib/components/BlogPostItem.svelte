@@ -17,12 +17,12 @@
 </script>
 
 <div class="my-4">
-  <h1 class="text-lg"> 
+  <h1 class="text-xl"> 
     <a href={path} class="underline underline-offset-2 decoration-1">
       {title} 
     </a>
   </h1> 
-  <div class="text-sm text-gray-700 mb-2">
+  <div class="text-sm text-gray-700 mt-1 mb-2">
     <time datetime={datePublished}>{formattedDate}</time>
     <span aria-hidden="true">•</span>
     <TagList {tags} />
