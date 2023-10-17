@@ -30,7 +30,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@vercel/analytics": "^1.1.1",
-		"luxon": "^3.4.3"
+		"@vercel/analytics": "^1.1.1"
 	}
 }
