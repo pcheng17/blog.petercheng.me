@@ -3,15 +3,14 @@
   import TagList from "./TagList.svelte";
   import { getFormattedDate } from "$lib/utils";
 
-  export let datePublished: PostMetadataProps['datePublished'];
+  export let pubDate: PostMetadataProps['pubDate'];
   export let tags: PostMetadataProps['tags'];
-  // export let readTime: PostMetadataProps['readTime'];
 
-  let formattedDate: string = getFormattedDate(datePublished);
+  let formattedDate: string = getFormattedDate(pubDate);
 </script>
 
 <div class="text-sm text-gray-700 mb-4">
-  <time datetime={datePublished}>{formattedDate}</time>
+  <time datetime={pubDate}>{formattedDate}</time>
   <span aria-hidden="true">•</span>
   <TagList {tags} />
   <!-- <span class="mx-2" aria-hidden="true">•</span> -->

@@ -5,33 +5,28 @@
   import Title from '$lib/components/Title.svelte';
   import { siteUrl } from '$lib/config.js';
   export let data;
-  const postMeta = {
-    datePublished: data.pubDate,
-    tags: data.tags,
-    // readTime: 5
-  };
 
-  let url: string = [siteUrl, "blog", data.slug].join("/");
-  let title: string = data.title;
+  let url: string = [siteUrl, "blog", data.meta.slug].join("/");
+  let title: string = data.meta.title;
 </script>
 
 <svelte:head>
   <title>{title}</title>
   <link rel="canonical" href={url} />
-  <meta name="description" content={data.description} />
+  <meta name="description" content={data.meta.description} />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content={title} />
-  <meta property="og:description" content={data.description} />
+  <meta property="og:description" content={data.meta.description} />
   <meta property="og:type" content="article" />
   <meta property="og:url" content={url} />
 
-  <Katex hasMath={data.math} />
+  <Katex hasMath={data.meta.math} />
 </svelte:head>
 
 <main>
   <article>
     <Title {title} />
-    <PostMetadata {...postMeta} />
+    <PostMetadata {...data.meta} />
     <Prose content={data.content} />
   </article>
 </main>

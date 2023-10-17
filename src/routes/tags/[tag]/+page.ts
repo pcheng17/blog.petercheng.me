@@ -1,6 +1,6 @@
 export const load = async ({ fetch, params }) => {
   const { tag } = params;
-  const response = await fetch(`/api/posts`);
+  const response = await fetch(`/api/published_posts`);
   const allPosts = await response.json();
 
   const posts = allPosts.filter((post) => post.meta.tags && post.meta.tags.includes(tag));

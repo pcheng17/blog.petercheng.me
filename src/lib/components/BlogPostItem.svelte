@@ -1,19 +1,15 @@
 <script lang="ts">
-  import type { BlogPostCardProps } from "$lib/types";
+  import type { BlogPostItemProps } from "$lib/types";
   import TagList from "./TagList.svelte";
   import { getFormattedDate } from "$lib/utils";
 
-  // export let title: BlogPostCardProps["title"];
-  // export let datePublished: BlogPostCardProps["datePublished"];
-  // export let description: BlogPostCardProps["description"];
+  export let title: BlogPostItemProps["title"];
+  export let pubDate: BlogPostItemProps["pubDate"];
+  export let tags: BlogPostItemProps["tags"];
+  export let description: BlogPostItemProps["description"];
+  export let path: BlogPostItemProps["path"];
 
-  export let title: string = "";
-  export let datePublished: string = "";
-  export let tags: string[] = [];
-  export let description: string = "";
-  export let path: string = "";
-
-  let formattedDate: string = getFormattedDate(datePublished);
+  let formattedDate: string = getFormattedDate(pubDate);
 </script>
 
 <div class="my-3">
@@ -23,7 +19,7 @@
     </a>
   </h1> 
   <div class="text-sm text-gray-700">
-    <time datetime={datePublished}>{formattedDate}</time>
+    <time datetime={pubDate}>{formattedDate}</time>
     <span aria-hidden="true">•</span>
     <TagList {tags} />
     <!-- <div class="mt-1">

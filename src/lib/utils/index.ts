@@ -7,7 +7,8 @@ export const fetchPosts = async () => {
       const { metadata } = await resolver();
       const postPath = path.slice(12, -3); // hard-coded for my directory structure
 
-      // TODO Fix dates here so that no one downstream needs to worry about timezones or formatting
+      // Fix the date string so that it's in the American/Los_Angeles timezone
+      metadata.pubDate = fixDateStr(metadata.pubDate);
 
       return {
         meta: metadata,
@@ -42,9 +43,12 @@ export const fetchYears = async (): Promise<number[]> => {
   return Array.from(allYearsSet);
 };
 
+export const fixDateStr = (date: string): string => {
+  return date.includes('T') ? `${date.split('T')[0]}T00:00:00-07:00` : `${date}T00:00:00-07:00`;
+}
+
 export const getFormattedDate = (date: string): string => {
-  const dateObj = date.includes('T') ? new Date(`${date.split('T')[0]}T00:00:00-07:00`) : new Date(`${date}T00:00:00-07:00`);
-  const formattedDate = dateObj.toLocaleDateString("en-US", {
+  const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",

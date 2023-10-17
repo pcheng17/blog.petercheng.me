@@ -1,10 +1,12 @@
 export type PostMetadataProps = {
-  datePublished: string;
+  pubDate: string;
   tags: string[];
 };
 
-export type BlogPostCardProps = {
+export type BlogPostItemProps = {
   title: string;
-  datePublished: string;
+  pubDate: string;
+  tags: string[];
   description: string;
+  path: string;
 };

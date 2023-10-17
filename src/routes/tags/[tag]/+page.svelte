@@ -1,5 +1,5 @@
 <script lang="ts">
-  import BlogPostCard from '$lib/components/BlogPostItem.svelte';
+  import BlogPostItem from '$lib/components/BlogPostItem.svelte';
   import Title from '$lib/components/Title.svelte';
   export let data;
 </script>
@@ -18,12 +18,7 @@
     </p>
   {:else}
     {#each data.posts as post}
-      <BlogPostCard 
-        title="{post.meta.title}" 
-        datePublished="{post.meta.date}" 
-        tags="{post.meta.tags}"
-        description="{post.meta.description}" 
-        path="{post.path}"/>
+      <BlogPostItem {...{...post.meta, path: post.path}} />
     {/each}
   {/if}
 </main>

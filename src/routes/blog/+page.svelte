@@ -18,22 +18,8 @@
   <ul class="block my-4">
     {#each data.posts as post}
       <li>
-        <BlogPostItem
-          title={post.meta.title}
-          datePublished={post.meta.pubDate} 
-          tags={post.meta.tags}
-          description={post.meta.description} 
-          path={post.path}/>
+        <BlogPostItem {...{...post.meta, path: post.path}} />
       </li>
     {/each}
   </ul>
 </main>
-
-<!-- <aside class="col-span-1">
-  <div class="mb-4">
-    <div class="mb-4">
-      <SidebarHeading text="Tags"/>
-      <TagCollection tags={data.tags}/>
-    </div>
-  </div>
-</aside> -->
