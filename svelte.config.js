@@ -14,7 +14,14 @@ const config = {
     vitePreprocess(),
     mdsvex({
       remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatexSvelte],
+      rehypePlugins: [
+        rehypeKatexSvelte,
+        {
+          macros: {
+            "\\R": "\\mathbb{R}",
+          }
+        }
+      ],
       highlight: {
         highlighter: async (code, lang = "text") => {
           const highlighter = await shiki.getHighlighter({
