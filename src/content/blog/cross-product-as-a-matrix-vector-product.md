@@ -1,5 +1,5 @@
 ---
-title: Cross product as a matrix multiplication
+title: Cross product as a matrix-vector product
 date: 2023-10-17
 description: The cross product of two vectors can be expressed as a product of a skew-symmetric matrix and a vector.
 keywords:
@@ -12,8 +12,6 @@ draft: false
 pubDate: 2023-10-18
 lastmod:
 ---
-
-## Cross product
 
 As a quick refresher, the cross product of two vectors $u, v \in \R^3$ is defined as follows:
 $$
