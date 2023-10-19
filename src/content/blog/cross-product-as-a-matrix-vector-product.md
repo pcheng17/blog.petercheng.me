@@ -1,6 +1,6 @@
 ---
 title: Cross product as a matrix-vector product
-date: 2023-10-17
+created: 2023-10-17
 description: The cross product of two vectors can be expressed as a product of a skew-symmetric matrix and a vector.
 keywords:
 tags:

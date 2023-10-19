@@ -1,6 +1,6 @@
 ---
 title: Hi, Mom!
-date: 2023-10-13
+created: 2023-10-13
 description: My first blog post!
 keywords:
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Cholesky factorization
-date: 2022-12-09
+created: 2022-12-09
 description: The Cholesky factorization is a decomposition of a Hermitian, or symmetric, positive definite matrix into the product of a lower triangular matrix and its conjugate transpose.
 keywords:
 tags:
