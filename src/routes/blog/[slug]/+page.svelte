@@ -26,7 +26,10 @@
 <main>
   <article>
     <Title {title} />
-    <PostMetadata {...data.meta} />
+    <PostMetadata
+      datePublished={data.meta.datePublished}
+      tags={data.meta.tags}
+    />
     <Prose content={data.content} />
   </article>
 </main>

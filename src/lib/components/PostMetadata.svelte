@@ -1,10 +1,9 @@
 <script lang="ts">
-  import type { PostMetadataProps } from "$lib/types";
   import TagList from "./TagList.svelte";
   import { getFormattedDate } from "$lib/utils";
 
-  export let datePublished: PostMetadataProps['datePublished'];
-  export let tags: PostMetadataProps['tags'];
+  export let datePublished: string;
+  export let tags: string[];
 
   let formattedDate: string = getFormattedDate(datePublished);
 </script>
