@@ -1,13 +1,13 @@
 <script lang="ts">
-  import type { BlogPostItemProps } from "$lib/types";
   import TagList from "./TagList.svelte";
   import { getFormattedDate } from "$lib/utils";
 
-  export let title: BlogPostItemProps["title"];
-  export let datePublished: BlogPostItemProps["datePublished"];
-  export let tags: BlogPostItemProps["tags"];
-  export let description: BlogPostItemProps["description"];
-  export let path: BlogPostItemProps["path"];
+  export let title: string;
+  export let description: string;
+  export let tags: string[];
+  export let datePublished: string;
+  export let lastModified: string;
+  export let path: string;
 
   let formattedDate: string = getFormattedDate(datePublished);
 </script>

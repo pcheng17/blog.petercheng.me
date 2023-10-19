@@ -5,8 +5,9 @@ export type PostMetadataProps = {
 
 export type BlogPostItemProps = {
   title: string;
-  datePublished: string;
-  tags: string[];
   description: string;
+  tags: string[];
+  datePublished: string;
+  lastModified: string;
   path: string;
 };
