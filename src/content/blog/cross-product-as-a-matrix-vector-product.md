@@ -9,8 +9,8 @@ tags:
 math: true
 toc: false
 draft: false
-pubDate: 2023-10-18
-lastmod:
+datePublished: 2023-10-18
+lastModified:
 ---
 
 As a quick refresher, the cross product of two vectors $u, v \in \R^3$ is defined as follows:

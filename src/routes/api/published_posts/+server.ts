@@ -9,12 +9,12 @@ export const GET: RequestHandler = async () => {
   const sortedPosts = allPosts
     .filter((post) => !post.meta.draft)
     .filter((post) => {
-      const postDate = new Date(post.meta.pubDate);
+      const postDate = new Date(post.meta.datePublished);
       return postDate <= currentDate;
     })
     .sort((a, b) => {
-      const dateA = new Date(a.meta.pubDate);
-      const dateB = new Date(b.meta.pubDate);
+      const dateA = new Date(a.meta.datePublished);
+      const dateB = new Date(b.meta.datePublished);
       return dateA > dateB ? -1 : dateA < dateB ? 1 : 0;
     });
   

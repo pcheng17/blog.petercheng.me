@@ -9,8 +9,8 @@ tags:
 math: true
 toc: false
 draft: false
-pubDate: 2023-10-15
-lastmod:
+datePublished: 2023-10-15
+lastModified:
 ---
 
 Before we introduce the Cholesky factorization, let's define some of the key words that will be used. Let $A \in \mathbb{C}^{n \times n}$.

@@ -8,8 +8,8 @@ tags:
 math: false
 toc: false
 draft: false
-pubDate: 2023-10-18
-lastmod:
+datePublished: 2023-10-18
+lastModified:
 ---
 
 Oftentimes, it's very useful to record all of the required modules/packages of a Python project. For example, this makes it very easy to get your project up and running on different computers. 

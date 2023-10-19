@@ -8,7 +8,7 @@ export const load = (async({ params }) => {
       const post = await import(`../../../content/blog/${slug}.md`);
 
       // Fix the date string so that it's in the American/Los_Angeles timezone
-      post.metadata.pubDate = fixDateStr(post.metadata.pubDate);
+      post.metadata.datePublished = fixDateStr(post.metadata.datePublished);
 
       return {
         meta: post.metadata,

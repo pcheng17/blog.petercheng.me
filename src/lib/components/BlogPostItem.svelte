@@ -4,12 +4,12 @@
   import { getFormattedDate } from "$lib/utils";
 
   export let title: BlogPostItemProps["title"];
-  export let pubDate: BlogPostItemProps["pubDate"];
+  export let datePublished: BlogPostItemProps["datePublished"];
   export let tags: BlogPostItemProps["tags"];
   export let description: BlogPostItemProps["description"];
   export let path: BlogPostItemProps["path"];
 
-  let formattedDate: string = getFormattedDate(pubDate);
+  let formattedDate: string = getFormattedDate(datePublished);
 </script>
 
 <div class="my-3">
@@ -19,7 +19,7 @@
     </a>
   </h1> 
   <div class="text-sm text-gray-700">
-    <time datetime={pubDate}>{formattedDate}</time>
+    <time datetime={datePublished}>{formattedDate}</time>
     <span aria-hidden="true">•</span>
     <TagList {tags} />
     <!-- <div class="mt-1">

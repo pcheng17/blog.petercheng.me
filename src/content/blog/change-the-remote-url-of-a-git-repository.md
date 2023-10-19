@@ -7,8 +7,8 @@ tags:
 math: false
 toc: false
 draft: false
-pubDate: 2023-10-17
-lastMod:
+datePublished: 2023-10-17
+lastModified:
 ---
 
 ```bash

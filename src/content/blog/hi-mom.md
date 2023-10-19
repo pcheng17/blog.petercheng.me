@@ -8,8 +8,8 @@ tags:
 math: false
 toc: false
 draft: false
-pubDate: 2023-10-15
-lastMod: 
+datePublished: 2023-10-15
+lastModified: 
 ---
 
 I now have a little corner on the interwebs all to myself. I'm planning to use this space as a way
