@@ -8,7 +8,9 @@ export const fetchPosts = async () => {
       const postPath = path.slice(12, -3); // hard-coded for my directory structure
 
       // Fix the date string so that it's in the American/Los_Angeles timezone
-      metadata.datePublished = fixDateStr(metadata.datePublished);
+      if (metadata.datePublished) {
+        metadata.datePublished = fixDateStr(metadata.datePublished);
+      }
 
       return {
         meta: metadata,

@@ -6,33 +6,36 @@ import rehypeKatexSvelte from "rehype-katex-svelte";
 import remarkMath from "remark-math";
 import shiki from "shiki";
 
+// mdsvex config
+const mdsvexConfig = {
+  remarkPlugins: [remarkMath],
+  rehypePlugins: [
+    rehypeKatexSvelte,
+    {
+      macros: {
+        "\\R": "\\mathbb{R}",
+      }
+    }
+  ],
+  highlight: {
+    highlighter: async (code, lang = "text") => {
+      const highlighter = await shiki.getHighlighter({
+        theme: "min-light",
+      });
+      const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
+      return `{@html \`${html}\` }`;
+    },
+  },
+  extensions: [".md"],
+};
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   // Consult https://kit.svelte.dev/docs/integrations#preprocessors
   // for more information about preprocessors
   preprocess: [
+    mdsvex(mdsvexConfig),
     vitePreprocess(),
-    mdsvex({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [
-        rehypeKatexSvelte,
-        {
-          macros: {
-            "\\R": "\\mathbb{R}",
-          }
-        }
-      ],
-      highlight: {
-        highlighter: async (code, lang = "text") => {
-          const highlighter = await shiki.getHighlighter({
-            theme: "min-light",
-          });
-          const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
-          return `{@html \`${html}\` }`;
-        },
-      },
-      extensions: [".md"],
-    }),
   ],
 
   kit: {
@@ -42,7 +45,7 @@ const config = {
     adapter: adapter(),
   },
 
-  extensions: [".svelte", ".md"],
+  extensions: [".svelte", ...mdsvexConfig.extensions],
 };
 
 export default config;
