@@ -10,8 +10,10 @@
 
 <div class="text-sm text-gray-700 mb-4">
   <time datetime={datePublished}>{formattedDate}</time>
-  <span aria-hidden="true">•</span>
-  <TagList {tags} />
+  {#if tags && tags.length !== 0}
+    <span aria-hidden="true">•</span>
+    <TagList {tags} />
+  {/if}
   <!-- <span class="mx-2" aria-hidden="true">•</span> -->
   <!-- <span>{readTime} min read</span> -->
 </div>
