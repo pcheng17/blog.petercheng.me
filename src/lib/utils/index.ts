@@ -58,3 +58,50 @@ export const getFormattedDate = (date: string): string => {
   });
   return formattedDate;
 }
+
+type Footnotes = {
+  [key: string]: string;
+};
+
+export function renderWithFootnotes(content: string): string {
+  // Regular expression to match footnote references
+  const footnoteRefRegex: RegExp = /\[\^(\w+)\]/g;
+
+  // Regular expression to match footnote content
+  const footnoteContentRegex: RegExp = /\[\^(\w+)\]:\s*(.*)/g;
+
+  // Storing footnote content in a Object
+  const footnotes: Footnotes = {};
+
+  // Find and store footnote content
+  content = content.replace(
+    footnoteContentRegex,
+    (_, index: string, text: string) => {
+      footnotes[index] = text;
+      return "";
+    }
+  );
+
+  // Replace footnote references with HTML markup
+  content = content.replace(footnoteRefRegex, (_, index: string) => {
+    const footnoteText = footnotes[index];
+    if (footnoteText) {
+      return `<sup><a href="#fn${index}" id="fnref${index}">${index}</a></sup>`;
+    } else {
+      return _; // If no corresponding content is found, keep the reference as is
+    }
+  });
+
+  // Generate the HTML for the footnotes section
+  let footnotesHTML: string = '<hr><section class="footnotes"><ol>';
+  for (const index in footnotes) {
+    let footNoteContent = footnotes[index];
+    footnotesHTML += `<li id="fn${index}">${footNoteContent} <a href="#fnref${index}" title="Jump back to reference">↩</a></li>`;
+  }
+  footnotesHTML += "</ol></section>";
+
+  // Append the footnotes section to the content
+  content += footnotesHTML;
+
+  return content;
+}
