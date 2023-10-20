@@ -8,7 +8,7 @@
   let formattedDate: string = getFormattedDate(datePublished);
 </script>
 
-<div class="text-sm text-gray-700 mb-4">
+<div class="text-sm text-gray-700 mb-6">
   <time datetime={datePublished}>{formattedDate}</time>
   {#if tags && tags.length !== 0}
     <span aria-hidden="true">•</span>
