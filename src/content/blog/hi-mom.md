@@ -1,26 +1,22 @@
 ---
 title: Hi, Mom!
 created: 2023-10-13
-description: My first blog post!
+description: My first blog post! The beginning of me building out my personal online space.
 keywords:
 tags:
-- journal
+  - journal
 math: false
 toc: false
 draft: false
 datePublished: 2023-10-15
-lastModified: 
+lastModified:
 ---
 
 I now have a little corner on the interwebs all to myself. I'm planning to use this space as a way
 to record things that I learn that I want to save for my future self, or perhaps for others who
 might stumble upon my blog.
 
-This website is built by me with [SvelteKit](https://kit.svelte.dev/) and 
-[Tailwind](https://tailwindcss.com/), and deployed on [Vercel](https://vercel.com). It's been a
-lot of fun learning basic frontend skills, and I'm looking forward to seeing how this website grows
-overtime! If you're curious, check out the source code
-[here](https://github.com/pcheng17/blog.petercheng.me). I am always happy to receive feedback!
+This website is built by me with [SvelteKit](https://kit.svelte.dev/) and [Tailwind](https://tailwindcss.com/), and deployed on [Vercel](https://vercel.com). It's been a lot of fun learning basic frontend skills, and I'm looking forward to seeing how this website grows overtime! If you're curious, check out the source code [here](https://github.com/pcheng17/blog.petercheng.me). I am always happy to receive feedback!
 
 This was inspired by the work of many others, in no particular order:
 - Bonsoon's [blog](https://blog.bonsoon.net/), from which I am shamelessly stealing much of my inspiration
