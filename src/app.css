@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .katex {
-  font-size: 1em !important;
+  font-size: 1.04em !important;
 }
 
 body {

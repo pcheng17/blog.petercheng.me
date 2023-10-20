@@ -12,6 +12,7 @@
 <svelte:head>
   <title>{title}</title>
   <link rel="canonical" href={url} />
+  <meta name="title" content={title} />
   <meta name="description" content={data.description} />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content={title} />
