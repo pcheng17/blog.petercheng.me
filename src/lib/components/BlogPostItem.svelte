@@ -13,12 +13,12 @@
 </script>
 
 <div class="my-3">
-  <h1 class="text-lg"> 
+  <h1 class="text-base md:text-lg"> 
     <a href={path} class="underline underline-offset-2 decoration-1">
       {title} 
     </a>
   </h1> 
-  <div class="text-sm text-gray-700">
+  <div class="text-xs md:text-sm text-gray-700">
     <time datetime={datePublished}>{formattedDate}</time>
     {#if tags && tags.length !== 0}
       <span aria-hidden="true">•</span>
