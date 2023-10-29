@@ -25,7 +25,7 @@
 
 <main>
   <article>
-    <img src="/images/me.png" alt="Peter Cheng" class="float-left mr-6 my-3 aspect-square rounded-full w-40 h-40 border-2 border-gray-500"/>
+    <img src="/images/me.jpeg" alt="Peter Cheng" class="float-left mr-6 my-3 aspect-square rounded-full w-40 h-40 border-2 border-gray-500"/>
     <Title {title} />
     <p class="my-4">
       Hey there! My name is Peter Cheng, a mathematician and software engineer. I currently work at 
