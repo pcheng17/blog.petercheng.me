@@ -11,6 +11,17 @@ export default {
         "penn-red": "#a00000",
         "teal": "#006a80",
       },
+      // fontSize: {
+      //   'xs': '13px',
+      //   'sm': '15px',
+      //   'base': '17px',
+      //   'lg': '19px',
+      //   'xl': '21px',
+      //   '2xl': '24px',
+      //   '3xl': '28px',
+      //   '4xl': '32px',
+      //   '5xl': '36px',
+      // },
       fontFamily: {
         mono: ["Ubuntu Mono", ...defaultTheme.fontFamily.mono],
       },

@@ -7,9 +7,7 @@ math: false
 
 Hey there! My name is Peter Cheng, a mathematician and software engineer. I currently work at Roblox
 on the physics engine team. In a nutshell, we make sure physics works as expected across the
-platform. Previously, I worked on the FX/CFX production software team, with a focus on the
-proprietary fire/gas and hair simulation engines. You can find my name in the credits of all of
-the DreamWorks' films between 2019 and 2022!
+platform. Previously, I worked at DreamWorks on the FX/CFX production software team, with a focus on the proprietary fire/gas and hair simulation engines. You can find my name in the credits of all of the DreamWorks' films between 2019 and 2022!
 
 I received my PhD in mathematics from UCLA, where I did research in the field of numerical analysis.
 I'm also passionate about teaching and sharing knowledge with those around me, which is the
