@@ -1,7 +1,7 @@
 ---
 title: The discrete Laplacian matrix
 created: 2023-10-28 11:36:58 PM
-description: 
+description: "There is a nice and compact way of writing the discrete N-d Laplacian matrices on a uniform grid. I've found these expressions particularly useful in practice; for example, when testing a linear solver via solving Poisson's equation Δu=f, one benefits from having a quick way of constructing the matrix on the left-hand side."
 keywords: 
 tags: 
   - math
@@ -15,7 +15,8 @@ lastModified:
 
 There is a nice and compact way of writing the discrete $N$-d Laplacian matrices on a uniform
 grid. I've found these expressions particularly useful in practice; for example, when testing a
-linear solver via solving Poisson's equation $\Delta u = f$, one benefits from having a quick way of constructing the matrix on the left-hand side.
+linear solver via solving Poisson's equation $\Delta u = f$, one benefits from having a quick way of
+constructing the matrix on the left-hand side.
 
 ## Kronecker product 
 
