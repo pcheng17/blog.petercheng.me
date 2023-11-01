@@ -1,5 +1,6 @@
 <script lang="ts">
   import Katex from '$lib/components/Katex.svelte';
+  import Prose from '$lib/components/Prose.svelte';
   import Title from '$lib/components/Title.svelte';
   import { siteUrl } from '$lib/config.js';
 
@@ -29,10 +30,10 @@
     <Title {title} />
     <p class="my-4">
       Hey there! My name is Peter Cheng, a mathematician and software engineer. I currently work at 
-      <a href="https://roblox.com" class="link" target="_blank">Roblox</a> 
+      <a href="https://roblox.com" class="prose-link" target="_blank">Roblox</a> 
       on the physics engine team. In a nutshell, we make sure physics works as expected across the
       platform. Previously, I worked at
-      <a href="https://dreamworks.com" class="link" target="_blank">DreamWorks</a>
+      <a href="https://dreamworks.com" class="prose-link" target="_blank">DreamWorks</a>
       on the FX/CFX production software team, with a focus on the proprietary fire/gas and hair
       simulation engines. You can find my name in the credits of all the DreamWorks' films between
       2019 and 2022!
@@ -46,40 +47,26 @@
       When I'm not working, I enjoy dabbling in various projects:
     </p>
     <ul class="list-disc list-outside pl-[26px] mt-5 marker:text-[#d1d5db]">
-      <li class="list">
+      <li class="prose-list">
         I'm a part-time computational consultant for the 
-        <a href="https://seguralab.duke.edu/" class="link" target="_blank">Segura Lab</a> 
+        <a href="https://seguralab.duke.edu/" class="prose-link" target="_blank">Segura Lab</a> 
         at Duke University. I work with various members of the research team in developing software
         for analyzing the void space of packed particles.  
       </li>
-      <li class="list">
+      <li class="prose-list">
         I'm very interested in this AI revolution that we're experiencing with GPT and related
         technologies, so I often spend my time building small apps that allow me to experiment with
         GPT. I would love to hear about the ideas you have!  
       </li>
-      <li class="list">
+      <li class="prose-list">
         This website, which serves two purposes: (1) it encourages me to document things I've learned to
         more easily share with others, and (2) it has allowed me to learn some basic frontend and backend
         skills via 
-        <a href="https://kit.svelte.dev/" class="link" target="_blank">SvelteKit</a>.  
+        <a href="https://kit.svelte.dev/" class="prose-link" target="_blank">SvelteKit</a>.  
       </li>
-      <li class="list">
+      <li class="prose-list">
         I also try and keep up with my Korean studies as much as I can.
       </li>
     </ul>
   </article>
 </main>
-
-<style>
-  .link {
-    @apply underline underline-offset-2 decoration-1 text-penn-red;
-  }
-
-  .link:hover {
-    @apply text-teal;
-  }
-  
-  .list {
-    @apply my-2 pl-[6px]; 
-  }
-</style>

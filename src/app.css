@@ -10,3 +10,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+.prose-link {
+  @apply underline underline-offset-2 decoration-1 text-penn-red;
+}
+
+.prose-link:hover {
+  @apply text-teal;
+}
+
+.prose-list {
+  @apply my-2 pl-[6px]; 
+}
