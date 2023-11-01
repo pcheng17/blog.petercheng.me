@@ -8,6 +8,6 @@
   <!-- <NavLink href="/tags" text="Tags" /> -->
   <!-- <NavLink href="/talks" text="Talks" /> -->
   <!-- <NavLink href="/projects" text="Projects" /> -->
-  <!-- <NavLink href="/contact" text="Contact" /> -->
+  <NavLink href="/contact" text="Contact" />
   <NavLink href="/about" text="About" />
 </nav>
