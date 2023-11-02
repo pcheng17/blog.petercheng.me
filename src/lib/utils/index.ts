@@ -26,7 +26,7 @@ export const fetchTags = async (): Promise<string[]> => {
   const allPosts = await fetchPosts();
   const allTagsSet = new Set<string>(); 
   allPosts.forEach((post) => {
-    if (post.meta && Array.isArray(post.meta.tags)) {
+    if (post.meta && Array.isArray(post.meta.tags) && !post.meta.draft) {
       post.meta.tags.forEach((tag: string) => allTagsSet.add(tag));
     }
   });
@@ -37,7 +37,7 @@ export const fetchYears = async (): Promise<number[]> => {
   const allPosts = await fetchPosts();
   const allYearsSet = new Set<number>();
   allPosts.forEach((post) => {
-    if (post.meta && post.meta.date) {
+    if (post.meta && post.meta.date && !post.meta.draft) {
       const year = post.meta.date.slice(0, 4);
       allYearsSet.add(Number(year));
     }
