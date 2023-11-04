@@ -4,7 +4,7 @@
 
 <footer class="py-4">
   <div class="container mx-auto text-center">
-    <p class="text-xs">© {year} Peter Cheng</p>
+    <p class="text-sm">© {year} Peter Cheng</p>
     <!-- <div class="space-x-4">
       <a href="/about" class="text-gray-400 hover:text-white">About</a>
       <a href="/contact" class="text-gray-400 hover:text-white">Contact</a>
