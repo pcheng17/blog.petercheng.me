@@ -45,9 +45,20 @@ export const fetchYears = async (): Promise<number[]> => {
   return Array.from(allYearsSet);
 };
 
-export const fixDateStr = (date: string): string => {
-  return date.includes('T') ? `${date.split('T')[0]}T00:00:00-07:00` : `${date}T00:00:00-07:00`;
-}
+export const isDST = (date: Date) => {
+  const jan = new Date(date.getFullYear(), 0, 1).getTimezoneOffset();
+  const jul = new Date(date.getFullYear(), 6, 1).getTimezoneOffset();
+  return date.getTimezoneOffset() < Math.max(jan, jul);
+};
+
+export const fixDateStr = (dateStr: string) => {
+  const date = new Date(dateStr);
+  const offset = isDST(date) ? "-07:00" : "-08:00";
+  return dateStr.includes("T")
+    ? `${dateStr.split("T")[0]}T00:00:00${offset}`
+    : `${dateStr}T00:00:00${offset}`;
+};
+
 
 export const getFormattedDate = (date: string): string => {
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
