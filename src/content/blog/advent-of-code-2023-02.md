@@ -14,8 +14,9 @@ lastModified:
 
 ## Thoughts
 
-[Advent of Code, Day 1](https://adventofcode.com/2023/day/2)
+[Advent of Code, Day 2](https://adventofcode.com/2023/day/2)
 
 My code can be found [here](https://github.com/pcheng17/advent-of-code-python/blob/main/2023/02.py).
 
-Pretty straightforward! The only hiccup I experienced was the parsing step. Ultimately it wasn't difficult, but I'm a bit rusty with AoC-input parsing, so this problem was a good warmup.
+Pretty straightforward! The only hiccup I experienced was the parsing step. Ultimately it wasn't
+difficult, but I'm a bit rusty with AoC-input parsing, so this problem was a good warmup.
