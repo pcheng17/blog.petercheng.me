@@ -1,7 +1,7 @@
 ---
 title: Advent of Code - 2023, Day 02
 created: 2023-12-07 12:11:20 AM
-description: 
+description: My thoughts on Advent of Code, 2023, Day 2.
 keywords: 
 tags: 
   - advent-of-code
