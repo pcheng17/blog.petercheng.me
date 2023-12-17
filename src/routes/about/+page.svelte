@@ -39,6 +39,13 @@
       2019 and 2022!
     </p>
     <p class="my-4">
+      I founded Ninjabyte Computing in 2019 to provide software, computational, and simulation consulting 
+      services to academic research groups. I currently work part-time with the
+      <a href="https://seguralab.duke.edu/" class="prose-link" target="_blank">Segura Lab</a> at Duke 
+      University, where we are developing software for analyzing the void space of packed particles. Check 
+      out our work on <a href="https://www.nature.com/articles/s43588-023-00551-x" class="prose-link" target="_blank">Nature Computational Science</a>!
+    </p>
+    <p class="my-4">
       I received my PhD in mathematics from UCLA, where I did research in the field of numerical analysis.
       I'm also passionate about teaching and sharing knowledge with those around me, which is the
       inspiration for this website!
@@ -47,12 +54,6 @@
       When I'm not working, I enjoy dabbling in various projects:
     </p>
     <ul class="list-disc list-outside pl-[26px] mt-5 marker:text-[#d1d5db]">
-      <li class="prose-list">
-        I'm a part-time computational consultant for the 
-        <a href="https://seguralab.duke.edu/" class="prose-link" target="_blank">Segura Lab</a> 
-        at Duke University. I work with various members of the research team in developing software
-        for analyzing the void space of packed particles.  
-      </li>
       <li class="prose-list">
         I'm very interested in this AI revolution that we're experiencing with GPT and related
         technologies, so I often spend my time building small apps that allow me to experiment with
