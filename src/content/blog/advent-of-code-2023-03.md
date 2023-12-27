@@ -26,5 +26,5 @@ The solution I came up with on the spot was extremely janky. For some reason, I 
 
 My cleaned up version, though probably not the most clean, is much nicer in comparison. The biggest change was doing the adjacency checks with a single nested for loop over the window (bounding box) of the region around each number.
 
-Thanks to people online, I was reminded of `defaultdict` from `collections`. It's a dictionary that allows you to specify the default value for a key that doesn't exist.
+Thanks to people online, I was reminded of `defaultdict` from `collections`. It's a dictionary that allows you to specify the default value for a key that doesn't exist.
 
