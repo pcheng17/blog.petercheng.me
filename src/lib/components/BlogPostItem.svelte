@@ -13,8 +13,8 @@
 </script>
 
 <div class="my-3">
-  <h1 class="text-lg"> 
-    <a href={path} class="underline underline-offset-2 decoration-1 hover:text-gray-500">
+  <h1 class="text-base"> 
+    <a href={path} class="underline underline-offset-2 decoration-1 decoration-dotted hover:decoration-solid">
       {title} 
     </a>
   </h1> 
