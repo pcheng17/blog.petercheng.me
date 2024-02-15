@@ -12,11 +12,11 @@ body {
 }
 
 .prose-link {
-  @apply underline underline-offset-2 decoration-1 text-penn-red;
+  @apply underline underline-offset-2 decoration-1 decoration-dotted text-penn-red;
 }
 
 .prose-link:hover {
-  @apply text-teal;
+  @apply decoration-solid;
 }
 
 .prose-list {
