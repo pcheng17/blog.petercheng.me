@@ -24,6 +24,7 @@ export default {
       // },
       fontFamily: {
         mono: ["Ubuntu Mono", ...defaultTheme.fontFamily.mono],
+        serif: ["Spectral", ...defaultTheme.fontFamily.serif],
       },
       typography(theme) {
         return {
