@@ -12,7 +12,7 @@
   let formattedDate: string = getFormattedDate(datePublished);
 </script>
 
-<div class="my-3">
+<div class="my-2">
   <div class="flex">
     <span class="flex-1">
       <a href={path} class="text-base underline underline-offset-2 decoration-1 decoration-dotted hover:decoration-solid">
