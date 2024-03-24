@@ -23,7 +23,7 @@ export default {
       //   '5xl': '36px',
       // },
       fontFamily: {
-        mono: ["Ubuntu Mono", ...defaultTheme.fontFamily.mono],
+        mono: ["Fira Code", ...defaultTheme.fontFamily.mono],
         serif: ["Spectral", ...defaultTheme.fontFamily.serif],
       },
       typography(theme) {
