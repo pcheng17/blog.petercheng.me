@@ -13,17 +13,17 @@ dependencies:
     version: 1.0.7(@sveltejs/kit@1.25.1)(svelte@4.2.1)
 
 devDependencies:
-  '@fontsource/ubuntu-mono':
+  '@fontsource/spectral':
     specifier: ^5.0.12
     version: 5.0.12
   '@sveltejs/adapter-auto':
-    specifier: ^2.0.0
+    specifier: ^2.1.0
     version: 2.1.0(@sveltejs/kit@1.25.1)
   '@sveltejs/adapter-static':
     specifier: ^2.0.3
     version: 2.0.3(@sveltejs/kit@1.25.1)
   '@sveltejs/kit':
-    specifier: ^1.20.4
+    specifier: ^1.25.1
     version: 1.25.1(svelte@4.2.1)(vite@4.4.9)
   '@tailwindcss/typography':
     specifier: ^0.5.10
@@ -41,28 +41,28 @@ devDependencies:
     specifier: ^1.2.0
     version: 1.2.0
   remark-math:
-    specifier: '3'
+    specifier: ^3.0.1
     version: 3.0.1
   shiki:
     specifier: ^0.14.4
     version: 0.14.4
   svelte:
-    specifier: ^4.0.5
+    specifier: ^4.2.1
     version: 4.2.1
   svelte-check:
-    specifier: ^3.4.3
+    specifier: ^3.5.2
     version: 3.5.2(postcss@8.4.30)(svelte@4.2.1)
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
   tslib:
-    specifier: ^2.4.1
+    specifier: ^2.6.2
     version: 2.6.2
   typescript:
-    specifier: ^5.0.0
+    specifier: ^5.2.2
     version: 5.2.2
   vite:
-    specifier: ^4.4.2
+    specifier: ^4.4.9
     version: 4.4.9
 
 packages:
@@ -255,8 +255,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@fontsource/ubuntu-mono@5.0.12:
-    resolution: {integrity: sha512-LQgJxifBj3uxDjBbiQazltASB2s9p0TZ4In2YfJhpqhhUltCkftCzytYkyoOfnJBQWpiEBiKuTbdk8QXzFI/qg==}
+  /@fontsource/spectral@5.0.12:
+    resolution: {integrity: sha512-tscRgEvVW/eRnBaGRnnlg86rx0NUMGzXFNePFBIXqdZE++9hOH0RTUqtpzUR+zS037kgbkitaVqotyGY8Vq+jw==}
     dev: true
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -490,7 +490,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.11
-      caniuse-lite: 1.0.30001539
+      caniuse-lite: 1.0.30001599
       fraction.js: 4.3.6
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -539,7 +539,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001539
+      caniuse-lite: 1.0.30001599
       electron-to-chromium: 1.4.528
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.21.11)
@@ -565,8 +565,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /caniuse-lite@1.0.30001539:
-    resolution: {integrity: sha512-hfS5tE8bnNiNvEOEkm8HElUHroYwlqMMENEzELymy77+tJ6m+gA2krtHl5hxJaj71OlpC2cHZbdSMX1/YEqEkA==}
+  /caniuse-lite@1.0.30001599:
+    resolution: {integrity: sha512-LRAQHZ4yT1+f9LemSMeqdMpMxZcc4RMWdj4tiFe3G8tNkWK+E58g+/tzotb5cU6TbcVJLr4fySiAW7XmxQvZQA==}
     dev: true
 
   /chokidar@3.5.3:

@@ -23,7 +23,8 @@ export default {
       //   '5xl': '36px',
       // },
       fontFamily: {
-        mono: ["Ubuntu Mono", ...defaultTheme.fontFamily.mono],
+        mono: ["ui-monospace", ...defaultTheme.fontFamily.mono],
+        serif: ["Spectral", ...defaultTheme.fontFamily.serif],
       },
       typography(theme) {
         return {
@@ -36,6 +37,7 @@ export default {
                 content: "none",
               },
               code: {
+                whiteSpace: 'nowrap',
                 fontFace: theme("fontFamily.mono"),
                 fontSize: theme("fontSize.base"),
                 fontWeight: theme("fontWeight.light"),

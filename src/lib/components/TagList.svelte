@@ -6,7 +6,7 @@
 
 <span class="text-sm">
   {#each sortedTags as tag, index}
-    <span class="mr-[-2px]">
+    <span class="mr-[-1px]">
       <a href={`/tags/${tag}`} class="text-penn-red hover:text-teal">{tag}</a>{index !== tags.length - 1 ? ',' : ''}
     </span>
   {/each}
