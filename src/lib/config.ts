@@ -1,2 +1,2 @@
-export const siteUrl = 'https://petercheng.me';
-export const siteTitle = 'Peter Cheng';
+export const SITE_TITLE = 'Peter Cheng';
+export const SITE_URL = 'https://petercheng.me';

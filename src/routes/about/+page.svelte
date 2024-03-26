@@ -2,9 +2,9 @@
   import Katex from '$lib/components/Katex.svelte';
   import Prose from '$lib/components/Prose.svelte';
   import Title from '$lib/components/Title.svelte';
-  import { siteUrl } from '$lib/config.js';
+  import { SITE_URL } from '$lib/config.js';
 
-  let url: string = [siteUrl, "about"].join("/");
+  let url: string = [SITE_URL, "about"].join("/");
   let title: string = "About me";
   let description: string = "A little bit about Peter Cheng";
   let hasMath: boolean = false;

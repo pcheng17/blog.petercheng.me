@@ -3,10 +3,10 @@
   import PostMetadata from '$lib/components/PostMetadata.svelte';
   import Prose from '$lib/components/Prose.svelte';
   import Title from '$lib/components/Title.svelte';
-  import { siteUrl } from '$lib/config.js';
+  import { SITE_URL } from '$lib/config.js';
   export let data;
 
-  let url: string = [siteUrl, "blog", data.meta.slug].join("/");
+  let url: string = [SITE_URL, "blog", data.meta.slug].join("/");
   let title: string = data.meta.title;
 </script>
 
