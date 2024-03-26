@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Katex from '$lib/components/Katex.svelte';
+  import Head from '$lib/components/Head.svelte';
   import PostMetadata from '$lib/components/PostMetadata.svelte';
   import Prose from '$lib/components/Prose.svelte';
   import Title from '$lib/components/Title.svelte';
@@ -10,19 +10,7 @@
   let title: string = data.meta.title;
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-  <link rel="canonical" href={url} />
-  <meta name="title" content={title} />
-  <meta name="description" content={data.meta.description} />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={data.meta.description} />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content={url} />
-
-  <Katex hasMath={data.meta.math} />
-</svelte:head>
+<Head title={title} description={data.meta.description} hasMath={data.meta.math} url={url} />
 
 <main>
   <article>

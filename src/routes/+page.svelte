@@ -1,21 +1,12 @@
 <script lang="ts">
   import BlogPostItem from '$lib/components/BlogPostItem.svelte';
+  import Head from '$lib/components/Head.svelte';
   import { SITE_TITLE, SITE_URL, DESCRIPTION } from '$lib/config.js';
 
   export let data;
-  let description: string = "Peter Cheng's website";
 </script>
 
-<svelte:head>
-  <title>{SITE_TITLE}</title>
-  <link rel="canonical" href={SITE_URL} />
-  <meta name="description" content={description} />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content={SITE_TITLE} />
-  <meta property="og:description" content={description} />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content={SITE_URL} />
-</svelte:head>
+<Head title={SITE_TITLE} description={DESCRIPTION} />
 
 <main class="">
   <ul class="block my-4">

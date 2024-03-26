@@ -3,6 +3,7 @@
   export let title: string = "";
   export let description: string = "";
   export let hasMath: boolean = false;
+  export let url: string = "";
 </script>
 
 <svelte:head>

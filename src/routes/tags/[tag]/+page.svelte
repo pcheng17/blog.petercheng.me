@@ -1,14 +1,17 @@
 <script lang="ts">
+  import Head from '$lib/components/Head.svelte';
   import BlogPostItem from '$lib/components/BlogPostItem.svelte';
   import Title from '$lib/components/Title.svelte';
+  import { SITE_URL } from '$lib/config.js';
   export let data;
+
+  let siteTitle = "Peter Cheng | " + data.tag;
+  let url: string = [SITE_URL, "tags", data.tag].join("/");
+  let description: string = `Posts with the tag ${data.tag}`;
 </script>
 
-<svelte:head>
-  <title>{data.tag}</title>
-  <meta property="og:title" content={data.tag} />
-  <!-- and others -->
-</svelte:head>
+
+<Head title={siteTitle} {description} {url} />
 
 <main>
   <Title title={data.tag} />

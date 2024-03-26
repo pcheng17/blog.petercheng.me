@@ -1,28 +1,16 @@
 <script lang="ts">
-  import Katex from '$lib/components/Katex.svelte';
-  import Prose from '$lib/components/Prose.svelte';
+  import Head from '$lib/components/Head.svelte';
   import Title from '$lib/components/Title.svelte';
   import { SITE_URL } from '$lib/config.js';
 
   let url: string = [SITE_URL, "about"].join("/");
   let title: string = "About me";
+  let siteTitle: string = "Peter Cheng | About me";
   let description: string = "A little bit about Peter Cheng";
   let hasMath: boolean = false;
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-  <link rel="canonical" href={url} />
-  <meta name="title" content={title} />
-  <meta name="description" content={description} />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content={url} />
-
-  <Katex {hasMath} />
-</svelte:head>
+<Head title={siteTitle} description={description} />
 
 <main>
   <article>
