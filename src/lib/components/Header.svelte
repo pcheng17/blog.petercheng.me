@@ -1,15 +1,15 @@
 <script lang="ts">
-  import NavLink from "./NavLink.svelte";
+  import HeaderLink from "./HeaderLink.svelte";
 </script>
 
 <header>
   <nav class="space-x-4" >
-    <NavLink href="/" text="Home" />
-    <!-- <NavLink href="/blog" text="Blog" /> -->
-    <!-- <NavLink href="/tags" text="Tags" /> -->
-    <!-- <NavLink href="/talks" text="Talks" /> -->
-    <!-- <NavLink href="/projects" text="Projects" /> -->
-    <!-- <NavLink href="/contact" text="Contact" /> -->
-    <NavLink href="/about" text="About" />
+    <HeaderLink href="/">Home</HeaderLink>
+    <!-- <HeaderLink href="/blog" text="Blog" /> -->
+    <!-- <HeaderLink href="/tags" text="Tags" /> -->
+    <!-- <HeaderLink href="/talks" text="Talks" /> -->
+    <!-- <HeaderLink href="/projects" text="Projects" /> -->
+    <!-- <HeaderLink href="/contact" text="Contact" /> -->
+    <HeaderLink href="/about">About</HeaderLink>
   </nav>
 </header>

@@ -4,5 +4,5 @@
 </script>
 
 <a {href} class="underline underline-offset-2 decoration-1 decoration-dotted hover:decoration-solid">
-  {text}
+  <slot />
 </a>

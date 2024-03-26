@@ -1,6 +1,6 @@
 <script lang="ts">
   import BlogPostItem from '$lib/components/BlogPostItem.svelte';
-  import { SITE_TITLE, SITE_URL } from '$lib/config.js';
+  import { SITE_TITLE, SITE_URL, DESCRIPTION } from '$lib/config.js';
 
   export let data;
   let description: string = "Peter Cheng's website";
