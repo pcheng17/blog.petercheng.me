@@ -6,7 +6,7 @@
   export let data;
 </script>
 
-<Head title={SITE_TITLE} description={DESCRIPTION} />
+<Head title={SITE_TITLE} description={DESCRIPTION} url={SITE_URL}/>
 
 <main class="">
   <ul class="block my-4">

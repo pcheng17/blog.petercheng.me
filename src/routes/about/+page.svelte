@@ -10,7 +10,7 @@
   let hasMath: boolean = false;
 </script>
 
-<Head title={siteTitle} description={description} />
+<Head title={siteTitle} description={description} url={url}/>
 
 <main>
   <article>
