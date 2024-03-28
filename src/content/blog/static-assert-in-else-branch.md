@@ -17,8 +17,6 @@ lastModified:
 Recently, I was working on some code where I was in a situation similar to the following:
 
 ```cpp
-#include <iostream>
-
 enum class Color {
     Red,
     Blue
