@@ -33,10 +33,10 @@ export default {
               pre: {
                 whiteSpace: "pre-wrap",
                 overflowX: "auto",
-                marginLeft: theme("spacing[4]"),
-                marginRight: theme("spacing[4]"),
-                marginTop: theme("spacing[4]"),
-                marginBottom: theme("spacing[4]"),
+                // marginLeft: theme("spacing[4]"),
+                // marginRight: theme("spacing[4]"),
+                // marginTop: theme("spacing[4]"),
+                // marginBottom: theme("spacing[4]"),
               },
               "code::before": {
                 content: "none", // don’t generate the pseudo-element
