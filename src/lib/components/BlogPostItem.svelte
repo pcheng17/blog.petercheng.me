@@ -16,7 +16,7 @@
   <div class="flex">
     <span class="flex-1">
       <a href={path} class="text-base underline underline-offset-2 decoration-1 decoration-dotted hover:decoration-solid">
-        {title} 
+        {title}
       </a>
     </span>
     <span class="text-sm text-gray-600 flex items-center">

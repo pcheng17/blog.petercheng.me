@@ -48,12 +48,12 @@
         <div class="flex">
           <span class="flex-1">
             <span class="mr-1">
-              {title} - {artist}             
+              {title} - {artist}
             </span>
             {#each links as { platform, url }}
-              <a href={url} class="prose-link mr-2" target="_blank">{platform}</a> 
+              <a href={url} class="prose-link mr-2" target="_blank">{platform}</a>
             {/each}
-          </span> 
+          </span>
           <span class="text-sm text-gray-600 flex items-center">
             {month} {year}
           </span>
