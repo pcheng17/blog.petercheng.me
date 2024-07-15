@@ -2,8 +2,8 @@
 title: Advent of Code - 2023, Day 02
 created: 2023-12-07 12:11:20 AM
 description: My thoughts on Advent of Code, 2023, Day 2.
-keywords: 
-tags: 
+keywords:
+tags:
   - advent-of-code
 math: false
 toc: false
@@ -11,8 +11,6 @@ draft: false
 datePublished: 2023-12-02
 lastModified:
 ---
-
-## Thoughts
 
 [Advent of Code, Day 2](https://adventofcode.com/2023/day/2)
 

@@ -2,7 +2,7 @@
 title: Advent of Code - 2023, Day 03
 created: 2023-12-16 04:24:13 PM
 description: My thoughts on Advent of Code, 2023, Day 3.
-keywords: 
+keywords:
 tags:
   - advent-of-code
 math: false
@@ -11,8 +11,6 @@ draft: false
 datePublished: 2023-12-03
 lastModified:
 ---
-
-## Thoughts
 
 [Advent of Code, Day 3](https://adventofcode.com/2023/day/3)
 
