@@ -1,49 +1,27 @@
 <script lang="ts">
   import Head from '$lib/components/Head.svelte';
-  import Title from '$lib/components/Title.svelte';
   import { SITE_TITLE, SITE_URL } from '$lib/config.js';
   import { musicList } from '../../content/musicList';
+  import { getFormattedDate, fixDateStr, removeDayFromDate } from "$lib/utils";
 
   let description: string = "An ever-growing list of my favorite music";
-  let title: string = ""
+  let title: string = "Peter Cheng | My favorite music"
 
-  // Helper function to convert month name to number
-  const monthToNumber = (month: string) => {
-    const months = {
-      January: 1,
-      February: 2,
-      March: 3,
-      April: 4,
-      May: 5,
-      June: 6,
-      July: 7,
-      August: 8,
-      September: 9,
-      October: 10,
-      November: 11,
-      December: 12,
-    };
-    return months[month] || 0;
-  };
-
-  // Sort the music list by year and month in descending order
   $: sortedMusicList = [...musicList].sort((a, b) => {
-    if (a.year !== b.year) {
-      return b.year - a.year;
-    }
-    return monthToNumber(b.month) - monthToNumber(a.month);
+    return b.date.localeCompare(a.date);
   });
 </script>
 
-<Head title={SITE_TITLE} description={description} url={SITE_URL}/>
+<Head title={title} description={description} url={SITE_URL}/>
 
 <main>
-  <Title {title} />
   <section>
     <p class="my-4">
-      An ever-growing list of music that I've enjoyed.
+      A simple list of music that I've really enjoyed and would like to share! The included date is
+      when I discovered the song. See the <a href="/music/gallery" class="prose-link">gallery</a>
+      version of this list!
     </p>
-    {#each sortedMusicList as { title, artist, links, month, year}}
+    {#each sortedMusicList as { title, artist, links, date}}
       <div class="">
         <div class="flex">
           <span class="flex-1">
@@ -55,7 +33,7 @@
             {/each}
           </span>
           <span class="text-sm text-gray-600 flex items-center">
-            {month} {year}
+            {removeDayFromDate(getFormattedDate(fixDateStr(date)))}
           </span>
         </div>
       </div>

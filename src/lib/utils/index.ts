@@ -24,7 +24,7 @@ export const fetchPosts = async () => {
 
 export const fetchTags = async (): Promise<string[]> => {
   const allPosts = await fetchPosts();
-  const allTagsSet = new Set<string>(); 
+  const allTagsSet = new Set<string>();
   allPosts.forEach((post) => {
     if (post.meta && Array.isArray(post.meta.tags) && !post.meta.draft) {
       post.meta.tags.forEach((tag: string) => allTagsSet.add(tag));
@@ -68,6 +68,10 @@ export const getFormattedDate = (date: string): string => {
     timeZone: 'America/Los_Angeles'
   });
   return formattedDate;
+}
+
+export const removeDayFromDate = (dateStr: string): string => {
+  return dateStr.replace(/\s\d{1,2},/, '');
 }
 
 type Footnotes = {
