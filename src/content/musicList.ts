@@ -35,4 +35,15 @@ export const musicList: Music[] = [
     description: "This song reminds me of the beginning of the panemic time period, when I first discovered this song. It has some kind of sentimental value because of it.",
     albumCover: "https://i.scdn.co/image/ab67616d00001e02a220092391684fd27f02affb"
   },
+  {
+    title: "Like A Fool",
+    artist: "NIve, Sam Kim",
+    links: [
+      { platform: "YouTube", url: "https://www.youtube.com/watch?v=J2gpmYhX3zc" },
+      { platform: "Spotify", url: "https://open.spotify.com/track/1E8Cztx0OIj4zm1IZh2XXj?si=fc9f190a56394d98" },
+    ],
+    date: "2020-04-03",
+    description: "",
+    albumCover: "https://i.scdn.co/image/ab67616d00001e0281e8bf4df241f2bed4d6debb",
+  },
 ];

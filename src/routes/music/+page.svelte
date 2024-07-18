@@ -17,7 +17,7 @@
 <main>
   <section>
     <p class="my-4">
-      A simple list of music that I've really enjoyed and would like to share! The included date is
+      A simple list of music that I've really enjoyed and would like to share! The associated date is
       when I discovered the song. See the <a href="/music/gallery" class="prose-link">gallery</a>
       version of this list!
     </p>
