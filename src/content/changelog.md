@@ -2,6 +2,11 @@
 title: Changelog
 ---
 
+## 2025-08-09
+
+- Removed music page
+- Added main tags page
+
 ## 2024-04-17
 
 ### Added

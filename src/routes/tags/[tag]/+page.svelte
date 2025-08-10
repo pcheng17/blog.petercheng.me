@@ -21,7 +21,7 @@
     </p>
   {:else}
     {#each data.posts as post}
-      <BlogPostItem 
+      <BlogPostItem
         title={post.meta.title}
         description={post.meta.description}
         tags={post.meta.tags}

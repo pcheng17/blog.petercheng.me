@@ -33,7 +33,7 @@
   <ul class="block my-4">
     {#each paginatedPosts as post}
       <li>
-        <BlogPostItem 
+        <BlogPostItem
           title={post.meta.title}
           description={post.meta.description}
           tags={post.meta.tags}
